@@ -23,6 +23,7 @@ def InitSetup(folder):
                     "Here you will fill out the information regarding the Resource Pack."
                 )
             ],
+            [sg.Text("When using an icon, 128x128 PNG images work best.")],
             [
                 sg.Text("Pack Description"),
                 sg.Input(),
@@ -42,18 +43,21 @@ def InitSetup(folder):
                     ]
                 ),
             ],
+            [sg.Text("Optional pack icon")],
             [sg.Button("Submit")],
         ],
     ).read(close=True)
     mcVersion = versionMap[values[1]]
     description = values[0]
     packFile = open(f"{folder}/pack.mcmeta", "w")
-    packFile.write(f"""
+    packFile.write(
+        f"""
 {{
   "pack": {{
     "pack_format": {mcVersion},
     "description": "{description}"
   }}
 }}
-    """)
+    """
+    )
     packFile.close()
