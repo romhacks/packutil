@@ -1,7 +1,7 @@
 # packutil authored by team electronika
 import PySimpleGUI as sg
 from black import sys
-import lib.packInitSetup as iSetup
+import src.packInitSetup as iSetup
 from os.path import exists
 
 sg.theme("DarkPurple1")
