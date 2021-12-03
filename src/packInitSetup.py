@@ -1,3 +1,4 @@
+from shutil import copyfile
 import PySimpleGUI as sg
 
 sg.theme("DarkPurple1")
@@ -43,7 +44,10 @@ def InitSetup(folder):
                     ]
                 ),
             ],
-            [sg.Text("Optional pack icon")],
+            [
+                sg.Text("Optional pack icon"),
+                sg.FileBrowse(file_types=(("PNG Images", "*.png"),)),
+            ],
             [sg.Button("Submit")],
         ],
     ).read(close=True)
@@ -61,3 +65,5 @@ def InitSetup(folder):
     """
     )
     packFile.close()
+    if values["Browse"] != "":
+        copyfile(values["Browse"], f"{folder}/pack.png")

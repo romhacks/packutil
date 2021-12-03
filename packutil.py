@@ -36,6 +36,8 @@ event, values = sg.Window(
     ],
 ).read(close=True)
 
+if event == None:
+    ControlledExit("Project load was cancelled.")
 
 folder = sg.popup_get_folder("Choose a project folder")
 if folder == None:
