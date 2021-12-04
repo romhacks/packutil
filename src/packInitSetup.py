@@ -5,7 +5,7 @@ sg.theme("DarkPurple1")
 
 
 def InitSetup(folder):
-    versionMap = {
+    versionMap = { #resource pack JSON uses number codes for versions
         "1.6.1 - 1.8.9": 1,
         "1.9 - 1.10.2": 2,
         "1.11 - 1.12.2": 3,
@@ -67,3 +67,4 @@ def InitSetup(folder):
     packFile.close()
     if values["Browse"] != "":
         copyfile(values["Browse"], f"{folder}/pack.png")
+    return values[1]
