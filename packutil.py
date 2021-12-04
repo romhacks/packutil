@@ -1,6 +1,7 @@
 # packutil authored by team electronika
 import PySimpleGUI as sg
 from black import sys
+from src.fileOp import GUIFileCopy
 import src.packInitSetup as iSetup
 import src.web as web
 import os
@@ -87,4 +88,5 @@ if event == "Existing":
         ControlledExit()
 else:
     version = iSetup.InitSetup(folder) #init setup returns a version field so we can copy the default ones
-    print(version)
+    sg.popup(f'Packutil will now copy the default texures for {version} to the project folder.')
+    GUIFileCopy(f"textures/{version}/assets", f"{folder}/assets")
