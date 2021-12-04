@@ -1,5 +1,4 @@
 # packutil authored by team electronika
-import zipfile
 import PySimpleGUI as sg
 from black import sys
 import src.packInitSetup as iSetup
