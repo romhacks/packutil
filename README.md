@@ -31,6 +31,6 @@ The .app will be built to the `dist` folder.
 - Requires `pyinstaller` pip package.
 1. `pyinstaller packutil.py`
 
-The .exe will be in the dist folder.
+The built program will be in the the `dist` folder.
 
 Specifying `--onefile` will pack everything into one executable instead of generating a folder of support files.
