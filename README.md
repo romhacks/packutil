@@ -24,11 +24,13 @@ If you'd like to make your own binaries of this software, it is confirmed to wor
 - Requires `py2app` pip package.
 1. `py2applet --make-setup packutil.py`
 2. `python setup.py py2app` (Use `python3` if you have `python` aliased to v2)
+
 The .app will be built to the `dist` folder.
 
 ## Windows
 - Requires `pyinstaller` pip package.
 1. `pyinstaller packutil.py`
+
 The .exe will be in the dist folder.
 
 Specifying `--onefile` will pack everything into one executable instead of generating a folder of support files.
