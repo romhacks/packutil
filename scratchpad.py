@@ -1,3 +1,4 @@
+# this is literally just stuff I want to remember it doesn't do anything lmao
 import PySimpleGUI as sg
 
 # sg.theme("DarkPurple1")  # Add a touch of color
