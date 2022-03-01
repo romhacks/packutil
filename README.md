@@ -1,3 +1,5 @@
+*Update 2022: We haven't had much time to work on this recently. We'll probably finish it. Eventually.*
+
 # packutil
 Packutil is a utility to easily set up a an environment where you can create resource packs for Minecraft: Java Edition.
 It supports multiple versions and offers a simple GUI for configuration.
